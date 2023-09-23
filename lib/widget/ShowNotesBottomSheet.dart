@@ -1,6 +1,6 @@
 
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart'; 
+import 'package:flutter/material.dart';
 import 'package:notes_app/widget/customTextField.dart';
 class ShowNotesBottomSheet extends StatelessWidget {
   const ShowNotesBottomSheet({super.key});
@@ -12,14 +12,13 @@ class ShowNotesBottomSheet extends StatelessWidget {
         children: [
           CustomTextField(
             hintText: 'Title',
-            edgeInsets: EdgeInsets.only(top: 40,left: 10),
-
+            maxline: 1,
           ),
         CustomTextField(
           hintText: 'Content',
-          edgeInsets: EdgeInsets.only(top: 100,left: 10),
+          maxline: 5,
         ),
-          SizedBox(height: 120,),
+          SizedBox(height: 100,),
           Container(
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(12),

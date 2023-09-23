@@ -3,17 +3,17 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:notes_app/widget/constant.dart';
 class CustomTextField extends StatelessWidget {
-   CustomTextField({required this.hintText,required this.edgeInsets});
+   CustomTextField({required this.hintText,this.maxline=1});
   String hintText;
-   EdgeInsets edgeInsets;
+   int  maxline ;
   @override
   Widget build(BuildContext context) {
     return   Padding(
       padding: const EdgeInsets.only(top: 30),
       child: TextField(
+        maxLines: maxline,
         cursorColor: kPrimeryColor,
         decoration: InputDecoration(
-          contentPadding: edgeInsets,
           hintText: hintText,
           hintStyle: TextStyle(
               color: kPrimeryColor
