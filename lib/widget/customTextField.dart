@@ -3,9 +3,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:notes_app/widget/constant.dart';
 class CustomTextField extends StatelessWidget {
-   CustomTextField({required this.hintText,this.maxline=1});
-  String hintText;
-   int  maxline ;
+  const CustomTextField({required this.hintText,this.maxline=1});
+  final String hintText;
+  final int  maxline ;
   @override
   Widget build(BuildContext context) {
     return   Padding(
