@@ -3,14 +3,26 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:notes_app/widget/constant.dart';
 class CustomTextField extends StatelessWidget {
-  const CustomTextField({required this.hintText,this.maxline=1});
+  const CustomTextField({required this.hintText,this.maxline=1, this.onSaved});
   final String hintText;
   final int  maxline ;
+  final void Function(String?)? onSaved;
   @override
   Widget build(BuildContext context) {
     return   Padding(
-      padding: const EdgeInsets.only(top: 30),
-      child: TextField(
+      padding: const EdgeInsets.only(top: 10),
+      child: TextFormField(
+        onChanged: onSaved,
+        onSaved: onSaved,
+        validator: (value){
+          if(value?.isEmpty ?? true)
+            {
+              return 'filed is required';
+            }else
+              {
+                return null;
+              }
+        },
         maxLines: maxline,
         cursorColor: kPrimeryColor,
         decoration: InputDecoration(
