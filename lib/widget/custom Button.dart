@@ -1,13 +1,13 @@
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:notes_app/widget/constant.dart';
+import 'package:notes_app/constant.dart';
+
 class CustomButton extends StatelessWidget {
-  const CustomButton({super.key,this.onTap});
+  const CustomButton({super.key, this.onTap});
   final void Function()? onTap;
   @override
   Widget build(BuildContext context) {
-    return  GestureDetector(
+    return GestureDetector(
       onTap: onTap,
       child: Container(
         decoration: BoxDecoration(
@@ -18,9 +18,11 @@ class CustomButton extends StatelessWidget {
         width: 340,
         child: Center(
           child: Text(
-            'Add',style: TextStyle(
-            color: Colors.black,
-          ),),
+            'Add',
+            style: TextStyle(
+              color: Colors.black,
+            ),
+          ),
         ),
       ),
     );
